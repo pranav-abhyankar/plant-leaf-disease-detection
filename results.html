@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='results_style.css') }}">
+    <title>Plant Disease Prediction Result</title>
+</head>
+<body>
+<div class="outer-container">
+    <div class="inner-container">
+        <h1 class="special-heading">Plant Disease Prediction Result</h1>
+
+        <!-- Display uploaded image -->
+        <h2>Image Uploaded</h2>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+
+        <!-- Display plant name and description -->
+        <h2>Plant Name: {{ plant_name }}</h2>
+        <p>{{ desc }}</p>
+
+        {% if cls.endswith('healthy') %}
+        <h2>Your plant is healthy!</h2>
+        {% else %}
+        <!-- Display disease information -->
+        <h2>Disease Information</h2>
+        <p>{{ info }}</p>
+
+        <!-- Display why the disease happens -->
+        <h2>Possible Causes</h2>
+        <p>{{ why }}</p>
+
+        <!-- Display remedies -->
+        <h2>Remedies</h2>
+        <ul class="dotted">
+            {% for remedy in remedies %}
+            <li>{{ remedy }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
