@@ -1,0 +1,73 @@
+body {
+    background-image: url('background_img.jpg'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, to fix the background image */
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1.special-heading {
+    background-color: rgba(76, 175, 80, 0.8); /* Adjust the last value (opacity) as needed */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.dotted {
+    padding-left: 20px;
+}
+
+ul.dotted li {
+    position: relative;
+}
+
+ul.dotted li:before {
+    content: "\2022"; /* Bullet point character */
+    position: absolute;
+    left: -15px; /* Adjust as needed */
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the last value (opacity) as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
